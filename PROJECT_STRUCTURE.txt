@@ -1,0 +1,149 @@
+================================================================================
+ random-refetch  |  Project Structure  |  项目结构  |  專案結構
+================================================================================
+
+[EN] Project structure
+[简] 项目结构
+[繁] 專案結構
+
+--------------------------------------------------------------------------------
+Directory Tree / 目录树 / 目錄樹
+--------------------------------------------------------------------------------
+
+random-refetch/
+├── core/
+│   └── core.cpp
+├── frontend-fltk/
+│   └── main.cpp
+├── frontend-tk/
+│   └── main.py
+├── .gitignore
+├── LICENSE
+├── README.md
+├── README.zh-CN.md
+├── README.zh-TW.md
+└── PROJECT_STRUCTURE.txt
+
+--------------------------------------------------------------------------------
+[EN] Description
+--------------------------------------------------------------------------------
+core/
+    C++ core logic, compiled into a dynamic library.
+    Windows: core.dll        Linux: libcore.so
+    Exported interfaces are only those marked with EXPORT.
+
+frontend-fltk/
+    C++ frontend built with FLTK.
+    Links directly against the core library.
+
+frontend-tk/
+    Python frontend built with TKinter.
+    Loads the core library via ctypes.
+
+.gitignore
+    Ignores build artifacts (*.dll, *.so, *.o, __pycache__, build/, etc.).
+
+LICENSE
+    License of this project (MIT by default).
+
+README.md
+    Project overview, build and usage instructions.
+
+README.zh-CN.md
+    Simplified Chinese version of the README.
+
+README.zh-TW.md
+    Traditional Chinese version of the README.
+
+PROJECT_STRUCTURE.txt
+    This file. Describes the directory layout.
+
+--------------------------------------------------------------------------------
+[简] 说明
+--------------------------------------------------------------------------------
+core/
+    C++ 核心逻辑，编译为动态库。
+    Windows 下为 core.dll，Linux 下为 libcore.so。
+    只有标记了 EXPORT 的接口才会对外暴露。
+
+frontend-fltk/
+    使用 FLTK 构建的 C++ 前端。
+    直接链接核心库。
+
+frontend-tk/
+    使用 TKinter 构建的 Python 前端。
+    通过 ctypes 加载核心库。
+
+.gitignore
+    忽略编译产物（*.dll、*.so、*.o、__pycache__、build/ 等）。
+
+LICENSE
+    本项目许可证（默认为 MIT）。
+
+README.md
+    项目简介、编译与使用说明。
+
+README.zh-CN.md
+    README 的简体中文版本。
+
+README.zh-TW.md
+    README 的繁体中文版本。
+
+PROJECT_STRUCTURE.txt
+    本文件，用于说明目录结构。
+
+--------------------------------------------------------------------------------
+[繁] 說明
+--------------------------------------------------------------------------------
+core/
+    C++ 核心邏輯，編譯為動態函式庫。
+    Windows 下為 core.dll，Linux 下為 libcore.so。
+    只有標記了 EXPORT 的介面才會對外暴露。
+
+frontend-fltk/
+    使用 FLTK 建構的 C++ 前端。
+    直接連結核心函式庫。
+
+frontend-tk/
+    使用 TKinter 建構的 Python 前端。
+    透過 ctypes 載入核心函式庫。
+
+.gitignore
+    忽略編譯產物（*.dll、*.so、*.o、__pycache__、build/ 等）。
+
+LICENSE
+    本專案授權條款（預設為 MIT）。
+
+README.md
+    專案簡介、編譯與使用說明。
+
+README.zh-CN.md
+    README 的簡體中文版本。
+
+README.zh-TW.md
+    README 的繁體中文版本。
+
+PROJECT_STRUCTURE.txt
+    本檔案，用於說明目錄結構。
+
+--------------------------------------------------------------------------------
+Build / 编译 / 編譯
+--------------------------------------------------------------------------------
+[EN] Planned commands (code not implemented yet):
+[简] 计划中的编译命令（代码尚未实现）：
+[繁] 計畫中的編譯指令（程式碼尚未實作）：
+
+[EN] core (Linux):   g++ -shared -fPIC -fvisibility=hidden -o libcore.so core.cpp
+[EN] core (Windows): cl /LD core.cpp /Fe:core.dll
+[EN] fltk frontend:  g++ main.cpp -o app -lfltk
+[EN] tk frontend:    python main.py
+
+[简] 核心 (Linux)：  g++ -shared -fPIC -fvisibility=hidden -o libcore.so core.cpp
+[简] 核心 (Windows)：cl /LD core.cpp /Fe:core.dll
+[简] FLTK 前端：     g++ main.cpp -o app -lfltk
+[简] TK 前端：       python main.py
+
+[繁] 核心 (Linux)：  g++ -shared -fPIC -fvisibility=hidden -o libcore.so core.cpp
+[繁] 核心 (Windows)：cl /LD core.cpp /Fe:core.dll
+[繁] FLTK 前端：     g++ main.cpp -o app -lfltk
+[繁] TK 前端：       python main.py
