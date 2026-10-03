@@ -1,6 +1,6 @@
-# random-refetch
+# random-number-picker
 
-> Random re-fetch tool
+> Random number picker
 
 **English** | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
 
@@ -19,4 +19,4 @@ Early development. Core and frontends are not yet implemented.
 Not available yet.
 
 ## License
-[MIT](LICENSE)
+[MIT License](LICENSE)

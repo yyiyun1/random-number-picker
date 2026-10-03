@@ -1,6 +1,6 @@
-# random-refetch
+# random-number-picker
 
-> 隨機重取工具
+> 隨機抽數工具
 
 [English](README.md) | [简体中文](README.zh-CN.md) | **繁體中文**
 
@@ -19,4 +19,4 @@
 暫不可用。
 
 ## 授權條款
-[MIT](LICENSE)
+[MIT 授權條款](LICENSE)
